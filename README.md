@@ -1,14 +1,14 @@
 # hello-clojure
 
-A Clojure library designed to ... well, that part is up to you.
+My first Clojure project! This is a simple app which has routing, can serve up static resources, and connect to a postgres database.
 
 ## Usage
 
-FIXME
+As of right now, the root route simply returns a localtimestamp from the database. This will eventually serve up a re-frame app as well.
 
 ## License
 
-Copyright © 2020 FIXME
+Copyright © 2020 Aubrey Snider
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
