@@ -6,6 +6,7 @@
 (def ^:private spec
   (pool/make-datasource-spec
     {:subprotocol "postgresql"
+     :initial-pool-size 3
      :user "helloclojure"
      :password "boring_unsafe_pw"
      :subname "//localhost:5432/helloclojure"}))

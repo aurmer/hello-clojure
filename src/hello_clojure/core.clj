@@ -7,6 +7,12 @@
             [ring.middleware.defaults :refer :all]
             [compojure.route :as route]))
 
+(defn wrap-dir-index [handler]
+  (fn [req]
+    (handler
+      (update-in req [:uri]
+                 #(if (= "/" %) "/index.html" %)))))
+
 (defn getDBTime []
   {:status 200
    :headers {"Content-Type" "application/json"}
@@ -19,15 +25,9 @@
       :body (json/write-str {:request {:operation "sum" :first_operand x :second_operand y}
                              :response {:sum (db/getSum x y)}})})
 
-(defn wrap-dir-index [handler]
-  (fn [req]
-    (handler
-     (update-in req [:uri]
-                #(if (= "/" %) "/index.html" %)))))
-
 (defroutes app-routes
-  (GET "/time" [] (getDBTime))
-  (GET "/sum-2-int/:x/:y" [x y] (getDBSum (Integer/parseInt  x) (Integer/parseInt  y)))
+  (GET "/api/time" [] (getDBTime))
+  (GET "/api/sum-2-int/:x/:y" [x y] (getDBSum (Integer. x) (Integer. y)))
   (route/resources "/")
   (route/not-found "404: Not Found"))
 
