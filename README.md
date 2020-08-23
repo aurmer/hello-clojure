@@ -4,7 +4,10 @@ My first Clojure project! This is a simple app which has routing, can serve up s
 
 ## Usage
 
-As of right now, the root route simply returns a localtimestamp from the database. This will eventually serve up a re-frame app as well.
+As of right now, there are two endpoints. Re-frame app to come.
+
+- /time will return a timestamp from the database
+- /sum-2-int/X/Y/ will return the summation of X and Y
 
 ## License
 
