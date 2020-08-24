@@ -15,13 +15,15 @@
 
 (defn getDBTime []
   {:status 200
-   :headers {"Content-Type" "application/json"}
+   :headers {"Content-Type" "application/json"
+             "Access-Control-Allow-Origin" "*"}
    :body (json/write-str {:request {:operation "time"}
                           :response {:localtimestamp (str (db/getTime))}})})
 
 (defn getDBSum [x y]
   {:status 200
-      :headers {"Content-Type" "application/json"}
+      :headers {"Content-Type" "application/json"
+                "Access-Control-Allow-Origin" "*"}
       :body (json/write-str {:request {:operation "sum" :first_operand x :second_operand y}
                              :response {:sum (db/getSum x y)}})})
 

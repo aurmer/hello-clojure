@@ -1,0 +1,21 @@
+.tooling-logo {
+  height: 37px;
+  transform: translateY(7px);
+}
+
+input.small {
+  width: 100px;
+}
+
+.flex-aligned {
+  display: flex;
+  align-items: center;
+}
+
+.spaced:not(:first-child) {
+  margin-left: 20px;
+}
+
+.spaced:not(:last-child) {
+  margin-right: 20px;
+}

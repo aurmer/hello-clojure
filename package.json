@@ -1,0 +1,21 @@
+{
+  "name": "hello-cljs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aubrey Snider <aubrey@aubreysnider.com> (http://aurmer.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aurmer/hello-cljs.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "create-react-class": "15.6.3",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "shadow-cljs": "2.11.0"
+  }
+}

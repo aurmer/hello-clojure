@@ -11,3 +11,10 @@ pom.xml.asc
 /.prepl-port
 .hgignore
 .hg/
+
+
+node_modules/
+.nrepl-port
+.shadow-cljs
+resources/public/js/
+*.diff
