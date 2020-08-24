@@ -1,13 +1,37 @@
 # hello-clojure
 
-My first Clojure project! This is a simple app which has routing, can serve up static resources, and connect to a postgres database.
+My first Clojure+CLJS project! This is a simple app which has routing, serves up a re-frame app, and connects to a postgres database.
 
 ## Usage
 
-As of right now, there are two endpoints. Re-frame app to come.
+As of right now, there are three endpoints.
 
 - `/api/time` will return a timestamp from the database
 - `/api/sum-2-int/X/Y/` will return the summation of X and Y
+- '/' entry to the re-frame app
+
+The re-frame app connects to each of these with a simple form UI.
+
+## Tech Used
+
+- Clojure
+  - Jetty
+  - ring
+  - compojure
+  - jdbc-c3p0
+  - PostgreSQL db
+- Clojurescript
+  - Reagent
+  - re-frame
+  - Bulma CSS
+
+## Learned
+
+This was a big undertaking due to using a language for the first time
+as well as each library being new. I had a head start on re-frame from
+my experience using React+Redux, but there is a lot to get used to.
+
+I found this to be challenging and motivating to continue learning Clojure.
 
 ## License
 
